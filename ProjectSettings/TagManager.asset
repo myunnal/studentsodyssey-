@@ -42,8 +42,11 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Sky
+  - name: Background
     uniqueID: 2267836725
+    locked: 0
+  - name: Posters
+    uniqueID: 4003665943
     locked: 0
   - name: Trees
     uniqueID: 700888471
