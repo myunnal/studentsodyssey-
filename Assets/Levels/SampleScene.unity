@@ -631,7 +631,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -30.745556, y: 0.7277384, z: -9.996005}
+  m_LocalPosition: {x: -33.602966, y: 0.7277384, z: -9.996005}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -837,7 +837,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.024945378, y: 0.0019451678}
+  m_Offset: {x: 0.05755481, y: 0.024799958}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -848,7 +848,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.5192814, y: 0.9588838}
+  m_Size: {x: 0.37733537, y: 0.9131743}
   m_EdgeRadius: 0
 --- !u!212 &545150466
 SpriteRenderer:
@@ -931,12 +931,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   horizontalInput: 0
   moveSpeed: 5
-  jumpPower: 13.5
+  jumpPower: 15
   isFacingRight: 0
-  idleDelay: 2
+  idleDelay: 3
   audioSource: {fileID: 0}
   jumpClip: {fileID: 8300000, guid: 14b879a910c37e741aab55853df7f669, type: 3}
-  walkClip: {fileID: 8300000, guid: a24e331ae77cad44ebf17ac45f3caead, type: 3}
+  walkClip: {fileID: 8300000, guid: d46803e5b1534b74aa6bab594f249420, type: 3}
 --- !u!95 &545150469
 Animator:
   serializedVersion: 5
@@ -990,8 +990,8 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.033939034, y: -0.49513867}
-  m_Size: {x: 0.5837342, y: 0.19652596}
+  m_Offset: {x: 0.03636928, y: -0.4951387}
+  m_Size: {x: 0.335929, y: 0.19652599}
   m_Direction: 1
 --- !u!82 &545150471
 AudioSource:
@@ -1013,7 +1013,7 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 1
+  MinDistance: 0.6082382
   MaxDistance: 500
   Pan2D: 0
   rolloffMode: 0
