@@ -6,6 +6,11 @@ public class ChangeSceneAndPlayAudio : MonoBehaviour
 {
     public AudioSource audioSource;
 
+    private void Start()
+    {
+        // Start the background music when the game starts
+        BackgroundMusicManager.instance.PlayMusic();
+    }
     public void startGame()
     {
         if (audioSource != null)
