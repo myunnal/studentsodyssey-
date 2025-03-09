@@ -169,7 +169,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 232154054}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3c1d9384676ea994c834cd98dd490216, type: 3}
+  m_Script: {fileID: 11500000, guid: 19c8736e1e0befd4daa6eede9a6d36b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &506331110
@@ -330,7 +330,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 232154056}
-        m_TargetAssemblyTypeName: LevelPicker, Assembly-CSharp
+        m_TargetAssemblyTypeName: LevelChooser, Assembly-CSharp
         m_MethodName: OpenLevel
         m_Mode: 3
         m_Arguments:
