@@ -132,6 +132,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 475157976}
+  - component: {fileID: 475157977}
   m_Layer: 5
   m_Name: Level Buttons
   m_TagString: Untagged
@@ -159,6 +160,18 @@ RectTransform:
   m_AnchoredPosition: {x: 1.7324219, y: -3.0008545}
   m_SizeDelta: {x: -3.1646, y: 6.16}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &475157977
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 475157975}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19c8736e1e0befd4daa6eede9a6d36b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &506331110
 GameObject:
   m_ObjectHideFlags: 0
@@ -578,7 +591,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2018559045}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 475157977}
+        m_TargetAssemblyTypeName: LevelChooser, Assembly-CSharp
+        m_MethodName: OpenLevel
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2018559045
 MonoBehaviour:
   m_ObjectHideFlags: 0
