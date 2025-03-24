@@ -8,9 +8,10 @@ public class ChangeSceneAndPlayAudio : MonoBehaviour
 
     private void Start()
     {
-        // Start the background music when the game starts
-        BackgroundMusicManager.instance.PlayMusic();
+        // Start the default background music when the game starts
+        BackgroundMusicManager.instance.PlayMusic(BackgroundMusicManager.instance.defaultMusic);
     }
+
     public void startGame()
     {
         if (audioSource != null)
@@ -33,13 +34,11 @@ public class ChangeSceneAndPlayAudio : MonoBehaviour
         SceneManager.LoadScene("LevelPicker");
     }
 
-
     public void leaveGame()
     {
 #if UNITY_EDITOR
         UnityEditor.EditorApplication.isPlaying = false; // Stop playing in the Editor
 #endif
-        Application.Quit(); 
-       
+        Application.Quit();
     }
 }

@@ -9,6 +9,9 @@ public class BackgroundMusicManager : MonoBehaviour
 
     private AudioSource audioSource;
 
+    public AudioClip defaultMusic;
+    public AudioClip level1Music;
+
     private void Awake()
     {
         // Ensure only one instance of BackgroundMusicManager exists
@@ -36,19 +39,27 @@ public class BackgroundMusicManager : MonoBehaviour
         // Stop the music if Level1 is loaded
         if (scene.name == "Level1")
         {
-            Debug.Log("Stopping music for Level1...");
-            StopMusic();
+            Debug.Log("Switching to Level1 music...");
+            PlayMusic(level1Music);
+        }
+        else
+        {
+            Debug.Log("Switching to default music...");
+            PlayMusic(defaultMusic);
         }
     }
 
-    public void PlayMusic()
+    public void PlayMusic(AudioClip musicClip)
     {
-        if (!audioSource.isPlaying)
+        if (audioSource.clip != musicClip || !audioSource.isPlaying)
         {
-            Debug.Log("Starting background music");
+            Debug.Log("Playing music: " + musicClip.name);
+            audioSource.clip = musicClip;
             audioSource.Play();
         }
     }
+
+   
 
     public void StopMusic()
     {
