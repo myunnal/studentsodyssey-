@@ -33,21 +33,26 @@ public class BackgroundMusicManager : MonoBehaviour
 
     // This method is called whenever a new scene is loaded
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
-    {
-        Debug.Log("Scene loaded: " + scene.name);
+{
+    Debug.Log("Scene loaded: " + scene.name);
 
-        // Stop the music if Level1 is loaded
-        if (scene.name == "Level1")
-        {
-            Debug.Log("Switching to Level1 music...");
-            PlayMusic(level1Music);
-        }
-        else
-        {
-            Debug.Log("Switching to default music...");
-            PlayMusic(defaultMusic);
-        }
+    if (scene.name == "Level1")
+    {
+        Debug.Log("Switching to Level1 music...");
+        PlayMusic(level1Music);
     }
+    else if (scene.name == "CollectablesMenu")
+    {
+        // When the menu is open, do nothing so the current music continues playing.
+        Debug.Log("Collectables Menu loaded - continuing current music");
+        // Optionally, you can leave this block empty or add logic if needed.
+    }
+    else
+    {
+        Debug.Log("Switching to default music...");
+        PlayMusic(defaultMusic);
+    }
+}
 
     public void PlayMusic(AudioClip musicClip)
     {

@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Ground
+  - Cigarette
   layers:
   - Default
   - TransparentFX
@@ -57,6 +58,9 @@ TagManager:
   - name: NPC
     uniqueID: 3212416321
     locked: 0
+  - name: Collectables
+    uniqueID: 3822777775
+    locked: 0
   - name: MC
     uniqueID: 1676634453
     locked: 0
@@ -65,4 +69,7 @@ TagManager:
     locked: 0
   - name: Dialogue
     uniqueID: 1835520235
+    locked: 0
+  - name: Menu
+    uniqueID: 3198199475
     locked: 0

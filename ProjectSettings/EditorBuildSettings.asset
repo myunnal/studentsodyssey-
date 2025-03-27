@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Levels/Level1.unity
     guid: b94d4175c74be4840b0b85e54cf21f92
+  - enabled: 1
+    path: Assets/Levels/CollectablesMenu.unity
+    guid: 4d773885ebd13004b94612dcbb854422
   m_configObjects: {}
