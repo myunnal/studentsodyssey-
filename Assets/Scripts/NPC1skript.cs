@@ -8,7 +8,8 @@ public class NPCDialogueTrigger : MonoBehaviour
     [SerializeField] private GameObject dialoguePanel;
 
     [Header("Dialogue Content")]
-    [SerializeField] private string[] dialogueLines = new string[] { 
+    [SerializeField] private string[] dialogueLines = new string[]
+    {
         "Dialogas"
     };
 
@@ -19,12 +20,14 @@ public class NPCDialogueTrigger : MonoBehaviour
 
     private void Start()
     {
+        // Ensure dialogue panel is hidden at start
         if (dialoguePanel != null)
             dialoguePanel.SetActive(false);
     }
 
     private void Update()
     {
+        // Check for advancing dialogue when Space is pressed and dialogue is active
         if (isDialogueActive && Input.GetKeyDown(KeyCode.Space))
         {
             AdvanceDialogue();
@@ -33,43 +36,52 @@ public class NPCDialogueTrigger : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
+        // Try to find the PlayerController script on the colliding object
         PlayerController playerController = other.GetComponent<PlayerController>();
-        
+
         if (playerController != null && !hasTriggered)
         {
+            // Start dialogue and mark as triggered
             StartDialogue(playerController);
-            hasTriggered = true;
+            hasTriggered = true;  // Dialogue won't trigger again after this
         }
     }
 
     private void StartDialogue(PlayerController player)
-{
-    playerController = player;
-
-    if (playerController != null)
     {
-        Animator animator = playerController.GetComponent<Animator>();
-        if (animator != null)
+        // Store reference to player controller script
+        playerController = player;
+
+        // Disable player movement
+        if (playerController != null)
         {
-            animator.SetFloat("xVelocity", 0f);
+            // Force the blend tree to "Stand" by setting the parameter to 0
+            Animator animator = playerController.GetComponent<Animator>();
+            if (animator != null)
+            {
+                animator.SetFloat("xVelocity", 0f);
+            }
+
+            // Disable the PlayerController script to prevent movement
+            playerController.enabled = false;
         }
 
-        playerController.enabled = false;
+        // Activate dialogue panel
+        if (dialoguePanel != null)
+        {
+            dialoguePanel.SetActive(true);
+        }
+
+        isDialogueActive = true;
+
+        // Reset to first line
+        currentLineIndex = 0;
+        DisplayCurrentLine();
     }
-
-    if (dialoguePanel != null)
-    {
-        dialoguePanel.SetActive(true);
-    }
-
-    isDialogueActive = true;
-
-    currentLineIndex = 0;
-    DisplayCurrentLine();
-}
 
     private void DisplayCurrentLine()
     {
+        // Display current dialogue line
         if (currentLineIndex < dialogueLines.Length)
         {
             if (dialogueText != null)
@@ -85,8 +97,10 @@ public class NPCDialogueTrigger : MonoBehaviour
 
     private void AdvanceDialogue()
     {
+        // Move to next line
         currentLineIndex++;
 
+        // Check if more lines exist
         if (currentLineIndex < dialogueLines.Length)
         {
             DisplayCurrentLine();
@@ -99,15 +113,18 @@ public class NPCDialogueTrigger : MonoBehaviour
 
     private void EndDialogue()
     {
+        // Hide dialogue panel
         if (dialoguePanel != null)
             dialoguePanel.SetActive(false);
-        
+
         isDialogueActive = false;
 
+        // Re-enable player movement
         if (playerController != null)
         {
             playerController.enabled = true;
         }
 
+        // hasTriggered = false; 
     }
 }
