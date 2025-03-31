@@ -2347,6 +2347,7 @@ GameObject:
   - component: {fileID: 1122200708}
   - component: {fileID: 1122200712}
   - component: {fileID: 1122200713}
+  - component: {fileID: 1122200714}
   m_Layer: 0
   m_Name: NPC1
   m_TagString: Player
@@ -2467,7 +2468,7 @@ SpriteRenderer:
   m_SortingLayerID: -1082550975
   m_SortingLayer: 5
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 6bc4019541825aa4d91a0ab086bdf98a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d554b1db94e13644c9e21a454a3da386, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 1
   m_FlipY: 0
@@ -2545,6 +2546,27 @@ MonoBehaviour:
   dialogueLines:
   - Sveiks seni
   - Kaip algorai?
+--- !u!95 &1122200714
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1122200707}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 8866271bfbefcfe47911c7fd4e591203, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1246283882
 GameObject:
   m_ObjectHideFlags: 0
