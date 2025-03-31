@@ -1,18 +1,18 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class Collectable : MonoBehaviour
+public class Collectible : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
+    public string itemName; // Name or ID of the item
+    public Sprite itemIcon; // Icon for UI representation
+
+    private void OnTriggerEnter(Collider other) 
+    {   
+        if (other.CompareTag("Player"))
+        {
+            InventoryManager.Instance.AddItem(this);
+            Destroy(gameObject);
+        }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    
 }
