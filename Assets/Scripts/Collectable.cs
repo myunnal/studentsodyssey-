@@ -5,7 +5,7 @@ public class Collectible : MonoBehaviour
     public string itemName;
     public Sprite itemIcon;
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
         Debug.Log("Triggered by: " + other.gameObject.name);
         if (other.CompareTag("Player"))
