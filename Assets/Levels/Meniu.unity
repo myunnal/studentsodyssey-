@@ -424,6 +424,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   defaultMusic: {fileID: 8300000, guid: 41e8c0217f690a445a69e3bfe75ece4d, type: 3}
   level1Music: {fileID: 8300000, guid: 2e3adbd0b130ff3469d26c43506adba5, type: 3}
+  levelSelectorMusic: {fileID: 8300000, guid: fa0c1fd4cdda0b8439303febcd640c0e, type: 3}
 --- !u!1 &578542973
 GameObject:
   m_ObjectHideFlags: 0
