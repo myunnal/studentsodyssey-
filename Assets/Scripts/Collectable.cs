@@ -2,17 +2,17 @@ using UnityEngine;
 
 public class Collectible : MonoBehaviour
 {
-    public string itemName; // Name or ID of the item
-    public Sprite itemIcon; // Icon for UI representation
+    public string itemName;
+    public Sprite itemIcon;
 
-    private void OnTriggerEnter(Collider other) 
-    {   
+    private void OnTriggerEnter(Collider other)
+    {
+        Debug.Log("Triggered by: " + other.gameObject.name);
         if (other.CompareTag("Player"))
         {
+            Debug.Log("Player detected. Adding item: " + itemName);
             InventoryManager.Instance.AddItem(this);
             Destroy(gameObject);
         }
-    }
-
-    
+    }   
 }
