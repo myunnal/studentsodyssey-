@@ -58,6 +58,9 @@ TagManager:
   - name: NPC
     uniqueID: 3212416321
     locked: 0
+  - name: DormWorkerPart
+    uniqueID: 3297884157
+    locked: 0
   - name: Collectables
     uniqueID: 3822777775
     locked: 0
@@ -67,9 +70,9 @@ TagManager:
   - name: Foreground
     uniqueID: 788342589
     locked: 0
-  - name: Dialogue
-    uniqueID: 1835520235
-    locked: 0
   - name: Menu
     uniqueID: 3198199475
+    locked: 0
+  - name: Dialogue
+    uniqueID: 1835520235
     locked: 0
