@@ -11,6 +11,7 @@ public class BackgroundMusicManager : MonoBehaviour
 
     public AudioClip defaultMusic;
     public AudioClip level1Music;
+    public AudioClip levelSelectorMusic;
 
     private void Awake()
     {
@@ -41,6 +42,11 @@ public class BackgroundMusicManager : MonoBehaviour
         Debug.Log("Switching to Level1 music...");
         PlayMusic(level1Music);
     }
+    else if (scene.name == "LevelPicker")
+        {
+            Debug.Log("Switching to Level1 music...");
+            PlayMusic(levelSelectorMusic);
+        }
     else if (scene.name == "CollectablesMenu")
     {
         // When the menu is open, do nothing so the current music continues playing.
@@ -56,6 +62,12 @@ public class BackgroundMusicManager : MonoBehaviour
 
     public void PlayMusic(AudioClip musicClip)
     {
+        if (musicClip == null)
+        {
+            Debug.LogWarning("Missing audio clip!");
+            return;
+        }
+
         if (audioSource.clip != musicClip || !audioSource.isPlaying)
         {
             Debug.Log("Playing music: " + musicClip.name);
