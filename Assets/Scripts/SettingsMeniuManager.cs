@@ -2,10 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using TMPro;
+using TMPro;using UnityEngine.Audio;
 
 public class SettingsMeniuManager : MonoBehaviour
 {
+    public AudioMixer MasterAudio;
+
+
     public TMP_Dropdown ResDropDown;
     public Toggle FullScreen;
 
@@ -17,6 +20,7 @@ public class SettingsMeniuManager : MonoBehaviour
 
     private void Start()
     {
+
         isFullScreen = true;
         AllRez = Screen.resolutions;
 
@@ -46,6 +50,11 @@ public class SettingsMeniuManager : MonoBehaviour
     {
         isFullScreen = FullScreen.isOn;
         Screen.SetResolution(SelectedRezList[SelectedResolution].width, SelectedRezList[SelectedResolution].height, isFullScreen);
+    }
+
+    public void SetVolume(float volume)
+    {
+        MasterAudio.SetFloat("volume", volume);
     }
 
 }
