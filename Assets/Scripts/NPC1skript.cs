@@ -8,10 +8,14 @@ public class NPCDialogueTrigger : MonoBehaviour
     [SerializeField] private GameObject dialoguePanel;
 
     [Header("Dialogue Content")]
-    [SerializeField] private string[] dialogueLines = new string[]
+    [SerializeField]
+    private string[] dialogueLines = new string[]
     {
         "Dialogas"
     };
+
+    [Header("Audio")]
+    [SerializeField] private AudioSource speakingSound; // [EDITED] Added AudioSource for speaking sound
 
     private int currentLineIndex = 0;
     private bool isDialogueActive = false;
@@ -88,6 +92,13 @@ public class NPCDialogueTrigger : MonoBehaviour
             {
                 dialogueText.text = dialogueLines[currentLineIndex];
             }
+
+            // [EDITED] Moved playing sound inside the correct condition
+            if (speakingSound != null)
+            {
+                speakingSound.pitch = Random.Range(0.95f, 1.05f);
+                speakingSound.Play();
+            }
         }
         else
         {
@@ -125,6 +136,6 @@ public class NPCDialogueTrigger : MonoBehaviour
             playerController.enabled = true;
         }
 
-        // hasTriggered = false; 
+        // hasTriggered = false;
     }
 }
