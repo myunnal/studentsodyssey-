@@ -1,0 +1,528 @@
+fileFormatVersion: 2
+guid: c990de7264b6d8a48912493d80b42566
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+    swizzle: 50462976
+    isReadable: 0
+    streamingMipmaps: 0
+    streamingMipmapsPriority: 0
+    vTOnly: 0
+    ignoreMipmapLimit: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 100
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    flipbookRows: 0
+    flipbookColumns: 0
+    ignorePngGamma: 0
+    cookieMode: 0
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+    applyGammaDecoding: 0
+  previousAsepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  asepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  importFileNodeState: 1
+  platformSettingsDirtyTick: 0
+  textureAssetName: 
+  singleSpriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  animatedSpriteImportData:
+  - name: zigmis__Frame_0
+    originalName: 
+    pivot: {x: 0.49999997, y: -0.054347824}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 63
+      y: 4
+      width: 52
+      height: 92
+    spriteID: cbc4a7a8c119ead469bd817d74aa7720
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 63, y: 4}
+  - name: zigmis__Frame_1
+    originalName: 
+    pivot: {x: 0.49019608, y: -0.056179773}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 63
+      y: 304
+      width: 51
+      height: 89
+    spriteID: 4617544d47e8cb340976ca8e84e1c631
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 63, y: 304}
+  - name: zigmis__Frame_2
+    originalName: 
+    pivot: {x: 0.49019608, y: -0.058139533}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 123
+      y: 198
+      width: 51
+      height: 86
+    spriteID: 13b3027a399824244b6db1bee96f16e8
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 123, y: 198}
+  - name: zigmis__Frame_3
+    originalName: 
+    pivot: {x: 0.49019608, y: -0.056179773}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 63
+      y: 401
+      width: 51
+      height: 89
+    spriteID: 22d2b047902ba994f9b6aaead5621ab3
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 63, y: 401}
+  - name: zigmis__Frame_4
+    originalName: 
+    pivot: {x: 0.49019608, y: -0.054347824}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 210
+      width: 51
+      height: 92
+    spriteID: ddc0f08c12aa25544b6d3f49b374470e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 210}
+  - name: zigmis__Frame_5
+    originalName: 
+    pivot: {x: 0.49019608, y: -0.052631583}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 51
+      height: 95
+    spriteID: 0b30a1335f2205a4598ad6ff4aa6e2b0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 4}
+  - name: zigmis__Frame_6
+    originalName: 
+    pivot: {x: 0.49019608, y: -0.054347824}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 310
+      width: 51
+      height: 92
+    spriteID: dbfbfe41f5c9958438e1dde820983f7a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 310}
+  - name: zigmis__Frame_7
+    originalName: 
+    pivot: {x: 0.49019608, y: -0.054347824}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 410
+      width: 51
+      height: 92
+    spriteID: eb81df1e594a4cd4c9a4db9e1d251327
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 410}
+  - name: zigmis__Frame_8
+    originalName: 
+    pivot: {x: 0.49019608, y: -0.056179773}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 123
+      y: 4
+      width: 51
+      height: 89
+    spriteID: 83757fead217afe4fa3acbfaca97966a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 123, y: 4}
+  - name: zigmis__Frame_9
+    originalName: 
+    pivot: {x: 0.49019608, y: -0.058139533}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 123
+      y: 292
+      width: 51
+      height: 86
+    spriteID: 489c4a66fb6dcfe4f86e94d20076e9d7
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 123, y: 292}
+  - name: zigmis__Frame_10
+    originalName: 
+    pivot: {x: 0.49019608, y: -0.056179773}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 123
+      y: 101
+      width: 51
+      height: 89
+    spriteID: d67cc9f92a431c541ada29b3a7f84b98
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 123, y: 101}
+  - name: zigmis__Frame_11
+    originalName: 
+    pivot: {x: 0.49019608, y: -0.054347824}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 63
+      y: 104
+      width: 51
+      height: 92
+    spriteID: 37424f6a09d935445a81c0505a8e9e3b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 63, y: 104}
+  - name: zigmis__Frame_12
+    originalName: 
+    pivot: {x: 0.49019608, y: -0.052631583}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 107
+      width: 51
+      height: 95
+    spriteID: a9e07c3b56338aa4d92793e06ef83029
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 107}
+  - name: zigmis__Frame_13
+    originalName: 
+    pivot: {x: 0.49019608, y: -0.054347824}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 63
+      y: 204
+      width: 51
+      height: 92
+    spriteID: b0d38f67254721046b2b38aadf11151b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 63, y: 204}
+  spriteSheetImportData: []
+  asepriteLayers:
+  - layerIndex: 0
+    guid: -319492440
+    name: zigmis_
+    layerFlags: 0
+    layerType: 0
+    blendMode: 0
+    cells:
+    - name: zigmis__Frame_0
+      frameIndex: 0
+      cellRect:
+        x: 24
+        y: 5
+        width: 52
+        height: 92
+      spriteId: cbc4a7a8c119ead469bd817d74aa7720
+    - name: zigmis__Frame_1
+      frameIndex: 1
+      cellRect:
+        x: 25
+        y: 5
+        width: 51
+        height: 89
+      spriteId: 4617544d47e8cb340976ca8e84e1c631
+    - name: zigmis__Frame_2
+      frameIndex: 2
+      cellRect:
+        x: 25
+        y: 5
+        width: 51
+        height: 86
+      spriteId: 13b3027a399824244b6db1bee96f16e8
+    - name: zigmis__Frame_3
+      frameIndex: 3
+      cellRect:
+        x: 25
+        y: 5
+        width: 51
+        height: 89
+      spriteId: 22d2b047902ba994f9b6aaead5621ab3
+    - name: zigmis__Frame_4
+      frameIndex: 4
+      cellRect:
+        x: 25
+        y: 5
+        width: 51
+        height: 92
+      spriteId: ddc0f08c12aa25544b6d3f49b374470e
+    - name: zigmis__Frame_5
+      frameIndex: 5
+      cellRect:
+        x: 25
+        y: 5
+        width: 51
+        height: 95
+      spriteId: 0b30a1335f2205a4598ad6ff4aa6e2b0
+    - name: zigmis__Frame_6
+      frameIndex: 6
+      cellRect:
+        x: 25
+        y: 5
+        width: 51
+        height: 92
+      spriteId: dbfbfe41f5c9958438e1dde820983f7a
+    - name: zigmis__Frame_7
+      frameIndex: 7
+      cellRect:
+        x: 25
+        y: 5
+        width: 51
+        height: 92
+      spriteId: eb81df1e594a4cd4c9a4db9e1d251327
+    - name: zigmis__Frame_8
+      frameIndex: 8
+      cellRect:
+        x: 25
+        y: 5
+        width: 51
+        height: 89
+      spriteId: 83757fead217afe4fa3acbfaca97966a
+    - name: zigmis__Frame_9
+      frameIndex: 9
+      cellRect:
+        x: 25
+        y: 5
+        width: 51
+        height: 86
+      spriteId: 489c4a66fb6dcfe4f86e94d20076e9d7
+    - name: zigmis__Frame_10
+      frameIndex: 10
+      cellRect:
+        x: 25
+        y: 5
+        width: 51
+        height: 89
+      spriteId: d67cc9f92a431c541ada29b3a7f84b98
+    - name: zigmis__Frame_11
+      frameIndex: 11
+      cellRect:
+        x: 25
+        y: 5
+        width: 51
+        height: 92
+      spriteId: 37424f6a09d935445a81c0505a8e9e3b
+    - name: zigmis__Frame_12
+      frameIndex: 12
+      cellRect:
+        x: 25
+        y: 5
+        width: 51
+        height: 95
+      spriteId: a9e07c3b56338aa4d92793e06ef83029
+    - name: zigmis__Frame_13
+      frameIndex: 13
+      cellRect:
+        x: 25
+        y: 5
+        width: 51
+        height: 92
+      spriteId: b0d38f67254721046b2b38aadf11151b
+    linkedCells: []
+    parentIndex: -1
+  platformSettings: []
+  secondarySpriteTextures: []
+  spritePackingTag: 
+  canvasSize: {x: 100, y: 100}
