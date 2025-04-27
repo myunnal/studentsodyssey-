@@ -7,7 +7,7 @@ public class EndLevel : MonoBehaviour
 {
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "Player")
+        if (collision.CompareTag("Player"))
         {
             UnlockedNewLevel();
             SceneManager.LoadScene("LevelPicker");
@@ -16,16 +16,18 @@ public class EndLevel : MonoBehaviour
 
     void UnlockedNewLevel()
     {
-        int currentLevel = SceneManager.GetActiveScene().buildIndex;
-        int reachedLevel = PlayerPrefs.GetInt("ReachedIndex", 1);
+        int currentLevelBuildIndex = SceneManager.GetActiveScene().buildIndex;
+        int currentLevelNumber = currentLevelBuildIndex - 1; 
+
+        int reachedIndex = PlayerPrefs.GetInt("ReachedIndex", 1);
         int unlockedLevel = PlayerPrefs.GetInt("UnlockedLevel", 1);
 
-        if (currentLevel >= reachedLevel)
+        if (currentLevelNumber >= reachedIndex)
         {
-            PlayerPrefs.SetInt("ReachedIndex", currentLevel + 1);
+            PlayerPrefs.SetInt("ReachedIndex", currentLevelNumber + 1);
         }
 
-        if (currentLevel >= unlockedLevel)
+        if (currentLevelNumber >= unlockedLevel)
         {
             PlayerPrefs.SetInt("UnlockedLevel", unlockedLevel + 1);
         }

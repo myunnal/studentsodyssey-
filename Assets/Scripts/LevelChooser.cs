@@ -31,8 +31,9 @@ public class LevelChooser : MonoBehaviour
 
     public void OpenLevel(int levelID)
     {
-        string levelName = "Level" + levelID;
-        SceneManager.LoadScene(levelName);
+        int buildIndex = levelID + 1;
+        SceneManager.LoadScene(buildIndex);
+
     }
 
     void ButtonToArray()
