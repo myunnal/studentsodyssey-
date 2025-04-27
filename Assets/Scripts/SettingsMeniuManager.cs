@@ -52,4 +52,9 @@ public class SettingsMeniuManager : MonoBehaviour
         Screen.SetResolution(SelectedRezList[SelectedResolution].width, SelectedRezList[SelectedResolution].height, isFullScreen);
     }
 
+    public void SetVolume(float volume)
+    {
+        MasterAudio.SetFloat("volume", volume);
+    }
+
 }
