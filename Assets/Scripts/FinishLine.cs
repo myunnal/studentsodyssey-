@@ -9,7 +9,27 @@ public class EndLevel : MonoBehaviour
     {
         if (collision.tag == "Player")
         {
+            UnlockedNewLevel();
             SceneManager.LoadScene("LevelPicker");
         }
+    }
+
+    void UnlockedNewLevel()
+    {
+        int currentLevel = SceneManager.GetActiveScene().buildIndex;
+        int reachedLevel = PlayerPrefs.GetInt("ReachedIndex", 1);
+        int unlockedLevel = PlayerPrefs.GetInt("UnlockedLevel", 1);
+
+        if (currentLevel >= reachedLevel)
+        {
+            PlayerPrefs.SetInt("ReachedIndex", currentLevel + 1);
+        }
+
+        if (currentLevel >= unlockedLevel)
+        {
+            PlayerPrefs.SetInt("UnlockedLevel", unlockedLevel + 1);
+        }
+
+        PlayerPrefs.Save();
     }
 }
