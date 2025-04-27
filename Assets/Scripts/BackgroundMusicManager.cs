@@ -40,12 +40,14 @@ public class BackgroundMusicManager : MonoBehaviour
     if (scene.name == "Level1")
     {
         Debug.Log("Switching to Level1 music...");
-        PlayMusic(level1Music);
-    }
+            PlayMusic(level1Music);
+            audioSource.volume = 0.6f;
+        }
     else if (scene.name == "LevelPicker")
         {
             Debug.Log("Switching to Level1 music...");
             PlayMusic(levelSelectorMusic);
+            audioSource.volume = 1f;
         }
     else if (scene.name == "CollectablesMenu")
     {
@@ -57,6 +59,7 @@ public class BackgroundMusicManager : MonoBehaviour
     {
         Debug.Log("Switching to default music...");
         PlayMusic(defaultMusic);
+        audioSource.volume = 1f;
     }
 }
 
