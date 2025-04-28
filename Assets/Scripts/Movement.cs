@@ -1,5 +1,5 @@
-using System;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -16,12 +16,27 @@ public class PlayerController : MonoBehaviour
     private float timeSinceMove = 0f;
     private bool isMoving = false;
 
-
     [Header("Audio")]
-    public AudioSource audioSource;    
-    public AudioClip jumpClip;         // The jump sound
-    public AudioClip walkClip;         // The walking/footstep loop
+    public AudioSource audioSource;
+    public AudioClip jumpClip;
+    public AudioClip walkClip;
+    
+    [Header("Spawn Settings")]
+    public Transform spawnPoint;
 
+    // Static variables to store the last known position
+    private static Vector3 lastPosition = Vector3.zero;
+
+    void Awake()
+    {
+        DontDestroyOnLoad(gameObject);
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    void OnDestroy()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
 
     void Start()
     {
@@ -30,12 +45,14 @@ public class PlayerController : MonoBehaviour
 
         if (audioSource == null)
             audioSource = GetComponent<AudioSource>();
+
+       
     }
 
     void Update()
     {
-        horizontalInput = Input.GetAxis("Horizontal");
 
+        horizontalInput = Input.GetAxis("Horizontal");
         FlipSprite();
 
         // JUMP
@@ -44,8 +61,6 @@ public class PlayerController : MonoBehaviour
             rb.velocity = new Vector2(rb.velocity.x, jumpPower);
             isGrounded = false;
             animator.SetBool("isJumping", true);
-
-            // Play jump sound once
             audioSource.PlayOneShot(jumpClip);
         }
 
@@ -54,8 +69,6 @@ public class PlayerController : MonoBehaviour
         {
             timeSinceMove = 0f;
             isMoving = true;
-
-            // If not already playing the walk sound, loop it
             if (!audioSource.isPlaying && walkClip != null && isGrounded)
             {
                 audioSource.clip = walkClip;
@@ -65,11 +78,8 @@ public class PlayerController : MonoBehaviour
         }
         else
         {
-            // Not moving horizontally
             timeSinceMove += Time.deltaTime;
             isMoving = false;
-
-            // Stop walk sound if playing
             if (audioSource.isPlaying && audioSource.clip == walkClip)
             {
                 audioSource.Stop();
@@ -77,20 +87,12 @@ public class PlayerController : MonoBehaviour
         }
 
         // Idle logic
-        if (!isMoving && timeSinceMove >= idleDelay)
-        {
-            animator.SetBool("isIdle", true);
-        }
-        else
-        {
-            animator.SetBool("isIdle", false);
-        }
+        animator.SetBool("isIdle", !isMoving && timeSinceMove >= idleDelay);
     }
 
-    private void FixedUpdate()
+    void FixedUpdate()
     {
         rb.velocity = new Vector2(horizontalInput * moveSpeed, rb.velocity.y);
-
         animator.SetFloat("xVelocity", Mathf.Abs(rb.velocity.x));
         animator.SetFloat("yVelocity", rb.velocity.y);
     }
@@ -115,4 +117,25 @@ public class PlayerController : MonoBehaviour
             animator.SetBool("isJumping", false);
         }
     }
+
+   void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+{
+    if (scene.name == "LevelPicker" || scene.name == "Meniu")
+    {
+        Destroy(gameObject);  // Destroy player when in non-gameplay scenes
+        return;
+    }
+
+    if (spawnPoint != null)
+    {
+        transform.position = spawnPoint.position;  // Move player to spawn point
+    }
+
+    if (transform.position.y < 0)  // If Y position is below ground
+    {
+        transform.position = new Vector3(transform.position.x, 0, transform.position.z); // Set to Y=0
+        Debug.Log("Player position adjusted to ground level.");
+    }
 }
+}
+
