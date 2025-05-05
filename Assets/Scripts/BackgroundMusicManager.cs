@@ -11,6 +11,7 @@ public class BackgroundMusicManager : MonoBehaviour
 
     public AudioClip defaultMusic;
     public AudioClip level1Music;
+    public AudioClip level2Music;
     public AudioClip levelSelectorMusic;
 
     private void Awake()
@@ -49,11 +50,11 @@ public class BackgroundMusicManager : MonoBehaviour
             PlayMusic(levelSelectorMusic);
             audioSource.volume = 1f;
         }
-    else if (scene.name == "CollectablesMenu")
+    else if (scene.name == "Level2")
     {
-        // When the menu is open, do nothing so the current music continues playing.
-        Debug.Log("Collectables Menu loaded - continuing current music");
-        // Optionally, you can leave this block empty or add logic if needed.
+            Debug.Log("Switching to Level2 music...");
+            PlayMusic(level2Music);
+            audioSource.volume = 1f;
     }
     else
     {
