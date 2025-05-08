@@ -52,18 +52,22 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        if (inDialogue)
-        {
-            horizontalInput = 0f;
-
-            if (audioSource.isPlaying && audioSource.clip == walkClip)
+         if (inDialogue)
             {
-                audioSource.Stop(); // Stop walking sound
-            }
+                horizontalInput = 0f;
 
-            animator.SetBool("isIdle", true); // Ensure idle animation plays
-            return;
-        }
+                // Force-stop all audio and reset walking logic
+                if (audioSource.isPlaying)
+                {
+                    audioSource.Stop();
+                    audioSource.loop = false; // Explicitly disable looping
+                }
+
+                isMoving = false; // Prevent accidental audio restart
+                timeSinceMove = idleDelay; // Force idle state
+                animator.SetBool("isIdle", true);
+                return;
+            }
 
         horizontalInput = Input.GetAxis("Horizontal");
         FlipSprite();
@@ -105,11 +109,12 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
+        if (inDialogue) return; // Skip movement calculations entirely
+        
         rb.velocity = new Vector2(horizontalInput * moveSpeed, rb.velocity.y);
         animator.SetFloat("xVelocity", Mathf.Abs(rb.velocity.x));
         animator.SetFloat("yVelocity", rb.velocity.y);
     }
-
     void FlipSprite()
     {
         if ((isFacingRight && horizontalInput < 0f) ||

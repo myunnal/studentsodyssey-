@@ -6,16 +6,21 @@ public class Collectible : MonoBehaviour
     public Sprite itemIcon;
     public AudioClip collectSound;
 
+    private bool isCollected = false;
+
     private void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("Triggered by: " + other.gameObject.name);
-        if (other.CompareTag("Player"))
-        {
+        if (isCollected || !other.CompareTag("Player")) return;
+        isCollected = true;
+
+        // turn off collider so no duplicates
+        var col = GetComponent<Collider2D>();
+        if (col != null) col.enabled = false;
+
+        if (collectSound != null)
             AudioSource.PlayClipAtPoint(collectSound, Camera.main.transform.position);
 
-            Debug.Log("Player detected. Adding item: " + itemName);
-            InventoryManager.Instance.AddItem(this);
-            Destroy(gameObject);
-        }
-    }   
+        InventoryManager.Instance.AddItem(this);
+        Destroy(gameObject);
+    }
 }
