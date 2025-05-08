@@ -11,6 +11,9 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D rb;
     private Animator animator;
 
+    // Dialogue lock
+    public bool inDialogue = false;
+
     // Idle-timer fields
     public float idleDelay = 1f;
     private float timeSinceMove = 0f;
@@ -45,12 +48,22 @@ public class PlayerController : MonoBehaviour
 
         if (audioSource == null)
             audioSource = GetComponent<AudioSource>();
-
-       
     }
 
     void Update()
     {
+        if (inDialogue)
+        {
+            horizontalInput = 0f;
+
+            if (audioSource.isPlaying && audioSource.clip == walkClip)
+            {
+                audioSource.Stop(); // Stop walking sound
+            }
+
+            animator.SetBool("isIdle", true); // Ensure idle animation plays
+            return;
+        }
 
         horizontalInput = Input.GetAxis("Horizontal");
         FlipSprite();
@@ -118,24 +131,23 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-   void OnSceneLoaded(Scene scene, LoadSceneMode mode)
-{
-    if (scene.name == "LevelPicker" || scene.name == "Meniu")
+    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        Destroy(gameObject);  // Destroy player when in non-gameplay scenes
-        return;
-    }
+        if (scene.name == "LevelPicker" || scene.name == "Meniu")
+        {
+            Destroy(gameObject);  // Destroy player when in non-gameplay scenes
+            return;
+        }
 
-    if (spawnPoint != null)
-    {
-        transform.position = spawnPoint.position;  // Move player to spawn point
-    }
+        if (spawnPoint != null)
+        {
+            transform.position = spawnPoint.position;  // Move player to spawn point
+        }
 
-    if (transform.position.y < 0)  // If Y position is below ground
-    {
-        transform.position = new Vector3(transform.position.x, 0, transform.position.z); // Set to Y=0
-        Debug.Log("Player position adjusted to ground level.");
+        if (transform.position.y < 0)  // If Y position is below ground
+        {
+            transform.position = new Vector3(transform.position.x, 0, transform.position.z); // Set to Y=0
+            Debug.Log("Player position adjusted to ground level.");
+        }
     }
 }
-}
-

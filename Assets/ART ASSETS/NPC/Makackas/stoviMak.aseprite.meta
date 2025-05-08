@@ -1,0 +1,332 @@
+fileFormatVersion: 2
+guid: 1e74d053c50a8064c879e802c09931be
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+    swizzle: 50462976
+    isReadable: 0
+    streamingMipmaps: 0
+    streamingMipmapsPriority: 0
+    vTOnly: 0
+    ignoreMipmapLimit: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 100
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    flipbookRows: 0
+    flipbookColumns: 0
+    ignorePngGamma: 0
+    cookieMode: 0
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+    applyGammaDecoding: 0
+  previousAsepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  asepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  importFileNodeState: 1
+  platformSettingsDirtyTick: 0
+  textureAssetName: 
+  singleSpriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  animatedSpriteImportData:
+  - name: stoviMak_Frame_0
+    originalName: 
+    pivot: {x: 0.5531915, y: -0.056179773}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 104
+      width: 47
+      height: 89
+    spriteID: 5aa23350913c3b7458c712da92094249
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 104}
+  - name: stoviMak_Frame_1
+    originalName: 
+    pivot: {x: 0.5531915, y: -0.058139533}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 114
+      y: 4
+      width: 47
+      height: 86
+    spriteID: cf09481dc750a8b4ca6883492da327ec
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 114, y: 4}
+  - name: stoviMak_Frame_2
+    originalName: 
+    pivot: {x: 0.5531915, y: -0.060240965}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 169
+      y: 4
+      width: 47
+      height: 83
+    spriteID: c14713382ee0ef24396865aea7000a05
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 169, y: 4}
+  - name: stoviMak_Frame_3
+    originalName: 
+    pivot: {x: 0.5531915, y: -0.058139533}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 114
+      y: 98
+      width: 47
+      height: 86
+    spriteID: f073060b00e35b1428758756592617db
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 114, y: 98}
+  - name: stoviMak_Frame_4
+    originalName: 
+    pivot: {x: 0.5531915, y: -0.056179773}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 59
+      y: 4
+      width: 47
+      height: 89
+    spriteID: ab143a576c7cbd5418daed194a562330
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 59, y: 4}
+  - name: stoviMak_Frame_5
+    originalName: 
+    pivot: {x: 0.5531915, y: -0.054347824}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 47
+      height: 92
+    spriteID: e98fe26a96185c040a022ad5c1652a3b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 4}
+  - name: stoviMak_Frame_6
+    originalName: 
+    pivot: {x: 0.5531915, y: -0.056179773}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 59
+      y: 101
+      width: 47
+      height: 89
+    spriteID: cd1c38e248ec4de4383d1a889476369e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 59, y: 101}
+  spriteSheetImportData: []
+  asepriteLayers:
+  - layerIndex: 0
+    guid: 24367358
+    name: stoviMak
+    layerFlags: 0
+    layerType: 0
+    blendMode: 0
+    cells:
+    - name: stoviMak_Frame_0
+      frameIndex: 0
+      cellRect:
+        x: 24
+        y: 5
+        width: 47
+        height: 89
+      spriteId: 5aa23350913c3b7458c712da92094249
+    - name: stoviMak_Frame_1
+      frameIndex: 1
+      cellRect:
+        x: 24
+        y: 5
+        width: 47
+        height: 86
+      spriteId: cf09481dc750a8b4ca6883492da327ec
+    - name: stoviMak_Frame_2
+      frameIndex: 2
+      cellRect:
+        x: 24
+        y: 5
+        width: 47
+        height: 83
+      spriteId: c14713382ee0ef24396865aea7000a05
+    - name: stoviMak_Frame_3
+      frameIndex: 3
+      cellRect:
+        x: 24
+        y: 5
+        width: 47
+        height: 86
+      spriteId: f073060b00e35b1428758756592617db
+    - name: stoviMak_Frame_4
+      frameIndex: 4
+      cellRect:
+        x: 24
+        y: 5
+        width: 47
+        height: 89
+      spriteId: ab143a576c7cbd5418daed194a562330
+    - name: stoviMak_Frame_5
+      frameIndex: 5
+      cellRect:
+        x: 24
+        y: 5
+        width: 47
+        height: 92
+      spriteId: e98fe26a96185c040a022ad5c1652a3b
+    - name: stoviMak_Frame_6
+      frameIndex: 6
+      cellRect:
+        x: 24
+        y: 5
+        width: 47
+        height: 89
+      spriteId: cd1c38e248ec4de4383d1a889476369e
+    linkedCells: []
+    parentIndex: -1
+  platformSettings: []
+  secondarySpriteTextures: []
+  spritePackingTag: 
+  canvasSize: {x: 100, y: 100}
