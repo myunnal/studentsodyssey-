@@ -28339,7 +28339,7 @@ GameObject:
   - component: {fileID: 1164516588}
   - component: {fileID: 1164516589}
   m_Layer: 0
-  m_Name: Outside
+  m_Name: CameraBounds
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -29262,7 +29262,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1458363861}
   m_Layer: 0
-  m_Name: Bounds
+  m_Name: CameraBounds
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
