@@ -8,16 +8,24 @@ public class InventoryManager : MonoBehaviour
     public delegate void InventoryChanged();
     public static event InventoryChanged OnInventoryChanged;
 
-    private List<CollectibleData> collectedItems = new List<CollectibleData>();
-    private const string PREF_KEY = "InventoryData";
+     private List<CollectibleData> collectedItems = new List<CollectibleData>();
+        private const string PREF_KEY    = "InventoryData";
+        private const string VERSION_KEY = "InventoryVersion";
 
     private void Awake()
     {
-        // ONLY for testing in the Editor: wipe out old saves so you always start empty
-        #if UNITY_EDITOR
-        PlayerPrefs.DeleteKey("InventoryData");
-        #endif
+        // 1) If stored version != this build’s version, clear out the old inventory.
+        string savedVersion = PlayerPrefs.GetString(VERSION_KEY, "");
+        string currentVersion = Application.version;              // e.g. “1.0.3”
+        if (savedVersion != currentVersion)
+        {
+            Debug.Log($"[InventoryManager] Detected version change ({savedVersion} → {currentVersion}), clearing old inventory.");
+            PlayerPrefs.DeleteKey(PREF_KEY);
+            PlayerPrefs.SetString(VERSION_KEY, currentVersion);
+            PlayerPrefs.Save();
+        }
 
+        // 2) Usual singleton setup & load
         if (Instance == null)
         {
             Instance = this;
@@ -29,7 +37,18 @@ public class InventoryManager : MonoBehaviour
             Destroy(gameObject);
         }
     }
-
+     void Update()
+    {
+        #if UNITY_EDITOR || DEVELOPMENT_BUILD
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            PlayerPrefs.DeleteKey(PREF_KEY);
+            collectedItems.Clear();
+            OnInventoryChanged?.Invoke();
+            Debug.Log("[InventoryManager] Inventory manually reset.");
+        }
+        #endif
+    }
 
     public void AddItem(Collectible item)
     {
