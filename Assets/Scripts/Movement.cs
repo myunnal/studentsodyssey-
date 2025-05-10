@@ -105,6 +105,12 @@ public class PlayerController : MonoBehaviour
 
         // Idle logic
         animator.SetBool("isIdle", !isMoving && timeSinceMove >= idleDelay);
+        
+        // Store position periodically for any scene changes
+        if (Time.frameCount % 30 == 0) // Every 30 frames
+        {
+            lastPosition = transform.position;
+        }
     }
 
     void FixedUpdate()
@@ -143,10 +149,35 @@ public class PlayerController : MonoBehaviour
             Destroy(gameObject);  // Destroy player when in non-gameplay scenes
             return;
         }
-
+        
+        // Handle returning from CollectablesMenu
+        if (scene.name == MenuChooser.previousScene && MenuChooser.previousScene != "CollectablesMenu")
+        {
+            // We're returning from the collectables menu
+            if (MenuChooser.playerPositionBeforeMenu != Vector3.zero)
+            {
+                transform.position = MenuChooser.playerPositionBeforeMenu;
+                Debug.Log("Restored player position from menu: " + transform.position);
+                
+                // Ensure player is grounded 
+                PositionFixHelper fixHelper = GetComponent<PositionFixHelper>();
+                if (fixHelper != null)
+                {
+                    fixHelper.ForceGroundSnap();
+                }
+                
+                return; // Skip other position handling
+            }
+        }
+        
+        // Fallback to regular position handling
         if (spawnPoint != null)
         {
             transform.position = spawnPoint.position;  // Move player to spawn point
+        }
+        else if (lastPosition != Vector3.zero)
+        {
+            transform.position = lastPosition; // Use last known position
         }
 
         if (transform.position.y < 0)  // If Y position is below ground
