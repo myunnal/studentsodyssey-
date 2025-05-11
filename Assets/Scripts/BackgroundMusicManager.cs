@@ -13,6 +13,7 @@ public class BackgroundMusicManager : MonoBehaviour
     public AudioClip level1Music;
     public AudioClip level2Music;
     public AudioClip levelSelectorMusic;
+    public AudioClip level3Music;
 
     private void Awake()
     {
@@ -43,17 +44,23 @@ public class BackgroundMusicManager : MonoBehaviour
         Debug.Log("Switching to Level1 music...");
             PlayMusic(level1Music);
             audioSource.volume = 0.6f;
-        }
+    }
     else if (scene.name == "LevelPicker")
-        {
-            Debug.Log("Switching to Level1 music...");
+    {
+            Debug.Log("Switching to Level Selector music...");
             PlayMusic(levelSelectorMusic);
             audioSource.volume = 1f;
-        }
+    }
     else if (scene.name == "Level2")
     {
             Debug.Log("Switching to Level2 music...");
             PlayMusic(level2Music);
+            audioSource.volume = 1f;
+    }
+    else if (scene.name == "Level3")
+    {
+            Debug.Log("Switching to Level3 music...");
+            PlayMusic(level3Music);
             audioSource.volume = 1f;
     }
     else
@@ -80,7 +87,7 @@ public class BackgroundMusicManager : MonoBehaviour
         }
     }
 
-   
+
 
     public void StopMusic()
     {

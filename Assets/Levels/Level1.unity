@@ -2035,6 +2035,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a3e50cced60a114b84d0b9fcd92431d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  finishSound: {fileID: 8300000, guid: a78b7409160b94744aee5b47080a761a, type: 3}
 --- !u!61 &481343869
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2357,6 +2358,7 @@ MonoBehaviour:
   level1Music: {fileID: 8300000, guid: 2e3adbd0b130ff3469d26c43506adba5, type: 3}
   level2Music: {fileID: 0}
   levelSelectorMusic: {fileID: 0}
+  level3Music: {fileID: 0}
 --- !u!82 &505147202
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2636,7 +2638,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -74.01078, y: -1.1686049, z: -10.04}
+  m_LocalPosition: {x: -73.15855, y: -1.1676369, z: -10.04}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

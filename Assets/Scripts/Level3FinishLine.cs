@@ -7,15 +7,28 @@ public class Level3FinishLine : MonoBehaviour
 {
     public TextMeshProUGUI messageText;
     public float messageDuration = 2.5f;
+    public AudioClip finishSound; // ðŸ‘ˆ Add this
+    private AudioSource audioSource;
+
+    private void Start()
+    {
+        audioSource = gameObject.AddComponent<AudioSource>();
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
         {
             int collectedCount = InventoryManager.Instance.GetCollectedItems().Count;
 
+            if (finishSound != null)
+            {
+                audioSource.PlayOneShot(finishSound);
+            }
+
             if (collectedCount >= 9)
             {
-                SceneManager.LoadScene("Ending");
+                StartCoroutine(LoadSceneAfterDelay("Ending", finishSound.length));
             }
             else
             {
@@ -28,7 +41,7 @@ public class Level3FinishLine : MonoBehaviour
     {
         if (messageText != null)
         {
-            messageText.text = "-Blemba að dar ne viskà surinkau";
+            messageText.text = "-Blemba aÅ¡ dar ne viskÄ… surinkau";
             messageText.enabled = true;
         }
 
@@ -37,4 +50,9 @@ public class Level3FinishLine : MonoBehaviour
         SceneManager.LoadScene("meniu");
     }
 
+    private IEnumerator LoadSceneAfterDelay(string sceneName, float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        SceneManager.LoadScene(sceneName);
+    }
 }

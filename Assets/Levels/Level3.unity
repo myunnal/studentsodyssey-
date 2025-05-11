@@ -26883,6 +26883,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   messageText: {fileID: 728684283}
   messageDuration: 2.5
+  finishSound: {fileID: 8300000, guid: a78b7409160b94744aee5b47080a761a, type: 3}
 --- !u!1 &463197911
 GameObject:
   m_ObjectHideFlags: 0
