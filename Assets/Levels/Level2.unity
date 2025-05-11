@@ -2654,6 +2654,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a3e50cced60a114b84d0b9fcd92431d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  finishSound: {fileID: 8300000, guid: a78b7409160b94744aee5b47080a761a, type: 3}
 --- !u!61 &483810423
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2706,7 +2707,7 @@ SpriteRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 483810421}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
