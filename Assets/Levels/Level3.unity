@@ -1766,7 +1766,7 @@ Camera:
   m_AllowMSAA: 1
   m_AllowDynamicResolution: 0
   m_ForceIntoRT: 0
-  m_OcclusionCulling: 1
+  m_OcclusionCulling: 0
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
 --- !u!4 &309040426
@@ -1778,7 +1778,7 @@ Transform:
   m_GameObject: {fileID: 309040423}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -17.635452, y: -1.8675404, z: -10.04}
+  m_LocalPosition: {x: -26.1951, y: -2.434, z: -10.04}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1799,7 +1799,7 @@ MonoBehaviour:
   m_ShowDebugText: 0
   m_ShowCameraFrustum: 1
   m_IgnoreTimeScale: 0
-  m_WorldUpOverride: {fileID: 1164516588}
+  m_WorldUpOverride: {fileID: 0}
   m_UpdateMethod: 2
   m_BlendUpdateMethod: 1
   m_DefaultBlend:
@@ -27308,9 +27308,9 @@ GameObject:
   m_Component:
   - component: {fileID: 682562717}
   - component: {fileID: 682562716}
+  - component: {fileID: 682562720}
   - component: {fileID: 682562719}
   - component: {fileID: 682562721}
-  - component: {fileID: 682562720}
   m_Layer: 0
   m_Name: Virtual Camera
   m_TagString: Untagged
@@ -27399,7 +27399,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_ConfineMode: 0
   m_BoundingVolume: {fileID: 0}
-  m_BoundingShape2D: {fileID: 1164516589}
+  m_BoundingShape2D: {fileID: 0}
   m_ConfineScreenEdges: 1
   m_Damping: 0
 --- !u!114 &682562721
@@ -27411,7 +27411,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 682562714}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 729aad4491e915a41bda2b8325cf757a, type: 3}
+  m_Script: {fileID: 11500000, guid: 6e5a6c16e0545bf459b71f8f7c2d9a64, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &685619127
@@ -53844,8 +53844,8 @@ SceneRoots:
   - {fileID: 447198839}
   - {fileID: 40063119}
   - {fileID: 1993398351}
-  - {fileID: 682562717}
   - {fileID: 1458363861}
+  - {fileID: 682562717}
   - {fileID: 1411646403}
   - {fileID: 1057275403}
   - {fileID: 1831394452}
